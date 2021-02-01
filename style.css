@@ -8,6 +8,19 @@ body {
     color: #333;
 }
 
+.bg_li {
+    background-color: transparent;
+}
+
+.wrapper-referal .header-nav {
+    background: transparent;
+    width: 100%;
+}
+
+.p-2 {
+     padding: 0!important; 
+}
+
 .wrapper-referal {
     background-image: linear-gradient(200deg, #165cb6, #1b73c7 40%, #0055c4);
 }
@@ -744,7 +757,53 @@ button.btn {
     }
 }
 
+
+@media (min-width: 1024px){
+    .header-btn-group{
+        display: block;
+    }
+
+    .collapse{
+        display: none;
+    }
+
+    .navbar{
+        display: none;
+    }
+
+    .about-referal{
+        display: block;
+    }
+
+    .logo-dsk{
+        display: block;
+    }
+}
+
+@media (max-width: 1024px){
+    .header-btn-group{
+        display: none;
+    }
+
+    .collapse{
+        display: block;
+    }
+
+    .navbar{
+        display: flex;
+    }
+
+    .about-referal{
+        display: none;
+    }
+
+    .logo-dsk{
+        display: none;
+    }
+}
+
 @media (min-width: 544px){
+    
     .change-form {
         border-radius: 8px;
     }
@@ -758,6 +817,8 @@ button.btn {
 }
 
 @media (min-width: 768px) {
+
+    
 
     .header-logo-white{
         
