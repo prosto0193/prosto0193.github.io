@@ -63,7 +63,7 @@
     <div class="container" id="terminals">
         <div class="col-12 start-earning-title">Sale of terminals </div>
         <div class="start-earning row">
-            <div class="col-md-5"><img class="picture-earning" src="/img/vector-creator (4) 1.png"></div>
+            <div class="col-md-5"><img class="picture-earning" src="img/vector-creator (4) 1.png"></div>
             <div class="col-md-7">
                 <div class="start-earning-info">
                     <div class="start-earning-h">POS and m-POS terminals</div>
@@ -91,15 +91,15 @@
         <div class="start-earning-h">Main advantages of SoftPOS over POS (or m-POS) terminals:</div>
         <div class="referal-advantages">
             <div class="col-md-4 referal-adv-item adv-border-rigth">
-                <div class="referal-adv-image"><img src="/img/dollar.png"></div>
+                <div class="referal-adv-image"><img src="img/dollar.png"></div>
                 <div class="referal-adv-short">Reduce the cost of buying or renting additional equipment.</div>
             </div>
             <div class="col-md-4 referal-adv-item adv-border-rigth">
-                <div class="referal-adv-image"><img src="/img/setting.png"></div>
+                <div class="referal-adv-image"><img src="img/setting.png"></div>
                 <div class="referal-adv-short">Reduced equipment maintenance costs.</div>
             </div>
             <div class="col-md-4 referal-adv-item ">
-                <div class="referal-adv-image"><img src="/img/fire.png"></div>
+                <div class="referal-adv-image"><img src="img/fire.png"></div>
                 <div class="referal-adv-short">Minimum time between the purchase of a product and the start of its
                     operation, without involvement of additional specialists</div>
             </div>
@@ -109,7 +109,7 @@
         <div class="container">
             <div class="col-12 start-earning-title">WebSite Development </div>
             <div class="start-earning row">
-                <div class="col-md-5"><img class="picture-earning" src="/img/vector-creator (4) 3.png"></div>
+                <div class="col-md-5"><img class="picture-earning" src="img/vector-creator (4) 3.png"></div>
                 <div class="col-md-7">
                     <div class="start-earning-info">
                         <div>
@@ -161,14 +161,14 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-5"><img class="picture-earning" src="/img/vector-creator (1) 1.png"></div>
+            <div class="col-md-5"><img class="picture-earning" src="img/vector-creator (1) 1.png"></div>
         </div>
     </div>
     <div class="cont_grey" id="instagram">
         <div class="container">
             <div class="col-12 start-earning-title">Instagram masks</div>
             <div class="start-earning row">
-                <div class="col-md-5"><img class="picture-earning" src="/img/vector-creator (5) 1.png"></div>
+                <div class="col-md-5"><img class="picture-earning" src="img/vector-creator (5) 1.png"></div>
                 <div class="col-md-7">
                     <div class="start-earning-info">
                         <div>
@@ -223,7 +223,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-5"><img class="picture-earning" src="/img/vector-creator 1.png"></div>
+            <div class="col-md-5"><img class="picture-earning" src="img/vector-creator 1.png"></div>
         </div>
     </div>
     <footer class="footer">
@@ -238,22 +238,24 @@
                             Business Center Logistics City, <br>Dubai Aviation City, P.O.Box:390667, Dubai, U.A.E. </p>
                     </div>
                     <div class="col-lg-6 col-md-7">
-                        <script type="text/javascript">
-                            window.csrf_token = "OVUFFlYiNSQ9ASsWNgExHzNFJQ9VXBITX3BoaHeEMUqlFOsxf5C7d6yb";
-                        </script>
+                        
                         <form accept-charset="UTF-8" action="/transactions" id="transaction_form" method="post"><input
-                                name="_csrf_token" type="hidden"
-                                value="OVUFFlYiNSQ9ASsWNgExHzNFJQ9VXBITX3BoaHeEMUqlFOsxf5C7d6yb"><input name="_utf8"
+                                name="_csrf_token" type="hidden">
+                            <input name="_utf8"
                                 type="hidden" value="✓">
                             <div class="change-form">
-                                <div class="form-group "><label class="form-label">Name</label><input class="form-input"
-                                        id="transaction_email" name="transaction[email]" placeholder="" type="email">
+
+                                 <div class="form-group ">
+                                    <label class="form-label">Name</label><input class="form-input"
+                                        name="name" placeholder="Introduce yourself" type="text">
                                 </div>
-                                <div class="form-group"><label class="form-label">Email</label><input class="form-input"
-                                        id="transaction_email" name="transaction[email]" placeholder="" type="email">
+                                <div class="form-group">
+                                    <label class="form-label">Email</label><input class="form-input"
+                                         name="email" placeholder="Enter mail" type="email">
                                 </div>
-                                <div class="form-group "><label class="form-label">Message</label><textarea
-                                        class="form-input" id="transaction_address" name="transaction[address]"
+                                <div class="form-group ">
+                                    <label class="form-label">Message</label><textarea
+                                        class="form-input" name="text"
                                         placeholder="" type="text"></textarea></div>
                                 <div class="form-group"><label for="agreee-with-terms"
                                         class="magic-label-text color-black">I agree that will my personal data be processed. </label></div><button
@@ -270,6 +272,36 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Отправка данных на сервер
+        function send(event, php){
+        console.log("Send request");
+        event.preventDefault ? event.preventDefault() : event.returnValue = false;
+        var req = new XMLHttpRequest();
+        req.open('POST', php, true);
+        req.onload = function() {
+           if (req.status >= 200 && req.status < 400) {
+           json = JSON.parse(this.response); // Ебанный internet explorer 11
+              console.log(json);
+                
+              // ЗДЕСЬ УКАЗЫВАЕМ ДЕЙСТВИЯ В СЛУЧАЕ УСПЕХА ИЛИ НЕУДАЧИ
+              if (json.result == "success") {
+                 // Если сообщение отправлено
+                 alert("Message sent");
+              } else {
+                 // Если произошла ошибка
+                 alert("Error. Message not sent");
+              }
+            // Если не удалось связаться с php файлом
+            } else {alert("Server error. №: "+req.status);}}; 
+  
+        // Если не удалось отправить запрос. Стоит блок на хостинге
+        req.onerror = function() {alert("Error sending request");};
+        req.send(new FormData(event.target));
+        }
+        </script>
+
 </body>
 
 </html>
