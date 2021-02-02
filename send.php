@@ -29,14 +29,14 @@ try {
 
     // Настройки вашей почты
     $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
-    $mail->Username   = 'elenamalets1999@gmail.com'; // Логин на почте
-    $mail->Password   = '3223mnnm'; // Пароль на почте
+    $mail->Username   = ' '; // Логин на почте
+    $mail->Password   = ' '; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('elenamalets1999@gmail.com', 'Sender name'); // Адрес самой почты и имя отправителя
+    $mail->setFrom(' ', 'Sender name'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
-    $mail->addAddress('17it3.malets.a@pdu.by');  
+    $mail->addAddress(' ');  
    // $mail->addAddress('youremail@gmail.com'); // Ещё один, если нужен
 
     // Прикрипление файлов к письму
